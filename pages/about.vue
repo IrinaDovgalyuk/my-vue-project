@@ -36,6 +36,6 @@ export default Vue.extend({})
   font-size: 48px;
   color: #35495e;
   letter-spacing: 1px;
-  margin-top: 20px;
+  margin: 20px 0;
 }
 </style>
