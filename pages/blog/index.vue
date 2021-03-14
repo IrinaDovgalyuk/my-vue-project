@@ -1,10 +1,6 @@
 <template>
-  <div class="container">
-    <div>
-      <h1 class="title">
-        Портфолио
-      </h1>
-    </div>
+  <div>
+    <Blog />
   </div>
 </template>
 
