@@ -5,7 +5,7 @@
 </template>
 
 <script lang="ts">
-import Vue from 'vue'
+import Vue from 'vue';
 
 export default Vue.extend({})
 </script>
@@ -32,10 +32,16 @@ export default Vue.extend({})
     Arial,
     sans-serif;
   display: block;
-  font-weight: 300;
-  font-size: 48px;
+  font-weight: 700;
+  font-size: 28px;
   color: #35495e;
   letter-spacing: 1px;
-  margin: 20px 0;
+  margin: 30px 0;
+}
+@media only screen and (min-width: 960px) {
+  .title {
+     font-size: 48px;
+     margin: 50px 0;
+  }
 }
 </style>

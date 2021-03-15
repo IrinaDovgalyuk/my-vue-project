@@ -5,12 +5,11 @@
         About me
       </h1>
 
-      <div class="articles">
-        <div class="articleItem">
-          <h2 class="articleItem__title">Title</h2>
-          <p class="articleItem__date">Date</p>
-          <p class="articleItem__text">text</p>
-          <p class="articleItem__views">Количество просмотров: <span  class="articleItem__views--number">0</span></p>
+      <div class="about">
+        <div class="aboutAuthor">
+          <img src="https://placeimg.com/400/400/nature" alt="" class="aboutAuthor__img">
+          <div class="aboutAuthor__name">Ирина Д</div>
+          <div class="aboutAuthor__text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dicta, molestiae omnis! Porro neque veniam facere optio provident animi quidem facilis reiciendis nam fugit, dolorem labore ab hic velit nobis officiis iusto voluptatum possimus omnis vel atque eos doloribus. Eos explicabo ad perferendis adipisci facere veritatis tenetur nostrum odit dolorum iure?</div>
         </div>
       </div>
     </div>
@@ -33,5 +32,39 @@ export default Vue.extend({
   align-items: center;
   justify-content: flex-start;
   text-align: center;
+}
+
+.aboutAuthor__img {
+  height: 200px;
+  width: 200px;
+  border-radius: 50%;
+  border: cadetblue solid 5px;
+}
+
+.aboutAuthor__name {
+  font-size: 24px;
+  font-weight: 500;
+  margin: 20px;
+  color:#35495e;
+}
+
+.aboutAuthor__text {
+  max-width: 500px;
+  text-align: justify;
+  font-size: 18px;
+  font-weight: 300;
+  margin: 15px;
+}
+
+@media only screen and (min-width: 960px) {
+  .aboutAuthor__name {
+    font-size: 28px;
+    margin: 40px;
+  }
+
+  .aboutAuthor__text {
+    font-size: 20px;
+    margin: 20px;
+  }
 }
 </style>

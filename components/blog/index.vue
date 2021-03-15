@@ -1,32 +1,76 @@
 <template>
-  <div class="container">
-    <div class="mainWrapper">
-      <h1 class="title">
-        Blog
-      </h1>
+  <div class="mainWrapper">
+    <h1 class="title">
+      Blog
+    </h1>
 
-      <div class="articles">
-        <div class="articleItem">
-          <h2 class="articleItem__title">Title</h2>
-          <p class="articleItem__date">Date</p>
-          <p class="articleItem__text">text</p>
-          <p class="articleItem__views">Количество просмотров: <span  class="articleItem__views--number">0</span></p>
-        </div>
-      </div>
+    <div class="articlesList">
+      <NewsArticle
+        v-for="articleItem of listArticles"
+        :key="articleItem.id"
+        :item="articleItem"
+      />
     </div>
   </div>
 </template>
 
 <script lang="ts">
-import Vue from 'vue'
+import Vue from 'vue';
+import NewsArticle from './articleItem.vue';
+
+const listArticles = [
+  {
+    title: '11 ресурсов для бесплатного образования',
+    date: '14.03.2021',
+    prew: 'Образование всегда будет в цене и откроет для вас кучу возможностей. И вовсе не обязательно...',
+    text: 'Образование всегда будет в цене и откроет для вас кучу возможностей. И вовсе не обязательно тратить на повышение своих навыков большие суммы - есть ресурсы, которые помогут вам сделать это совершенно бесплатно. AdMe.ru собрал 11 сайтов на русском и английском языках, где можно пройти обучение, вложив в него только свое время.',
+    views: 100,
+    link: 'https://www.adme.ru/zhizn-nauka/11-resursov-dlya-besplatnogo-obrazovaniya-841610/',
+  },
+  {
+    title: '20 выдающихся людей, которые на 101 % выложились, чтобы порадовать других',
+    date: '13.03.2021',
+    prew: 'Некоторые люди полностью отдаются служению другим, даже если их за это никто не поблагодарит. Они стараются из всех сил,..',
+    text: 'Некоторые люди полностью отдаются служению другим, даже если их за это никто не поблагодарит. Они стараются из всех сил, чтобы каждый человек почувствовал заботу и уважение, которых он заслуживает. Свои добрые дела они делают порой еще и с юмором, как тот директор, который переоделся Бэтменом и залез на крышу, чтобы утром поприветствовать детей, идущих в школу, или тот дедушка, который построил американские горки на заднем дворе для своих внуков.',
+    views: 700,
+    link: 'https://www.adme.ru/svoboda-psihologiya/20-vydayuschihsya-lyudej-kotorye-na-101-vylozhilis-chtoby-poradovat-drugih-2508824/',
+  },
+  {
+    title: 'Корейская художница создает изящные татуировки, и они просто олицетворение нежности',
+    date: '10.03.2021',
+    prew: 'По словам психологов, для многих людей татуировки имеют глубинный смысл. Они провоцируют серьезные личностные изменения, которые делают человека...',
+    text: 'По словам психологов, для многих людей татуировки имеют глубинный смысл. Они провоцируют серьезные личностные изменения, которые делают человека ментально сильнее. Сион Квак — тату-мастер из Южной Кореи, чьи работы не спутаешь ни с какими другими из-за характерного авторского стиля. Красное кружево, бусины с замысловатым орнаментом и красочные животные — Сион объединяет эти элементы, чтобы создать выразительные образы на коже людей.',
+    views: 1000,
+    link: 'https://www.adme.ru/tvorchestvo-hudozhniki/korejskaya-hudozhnica-sozdaet-izyaschnye-tatuirovki-i-oni-prosto-olicetvorenie-nezhnosti-2508817/',
+  },
+  {
+    title: '14 культовых фильмов, в которых одежду героев продумывали так же тщательно, как и их диалоги',
+    date: '05.03.2021',
+    prew: 'В среднем на создание костюма в фильме выделяют от 9 до 20 тыс. долларов. Денег часто не хватает, и дизайнерам приходится изворачиваться,..',
+    text: 'В среднем на создание костюма в фильме выделяют от 9 до 20 тыс. долларов. Денег часто не хватает, и дизайнерам приходится изворачиваться, чтобы создать красивую одежду, которая передаст характер персонажа и запомнится зрителям.',
+    views: 200,
+    link: 'https://www.adme.ru/tvorchestvo-kino/14-kultovyh-filmov-v-kotoryh-odezhdu-geroev-produmyvali-tak-zhe-tschatelno-kak-i-ih-dialogi-2508813/',
+  },
+];
 
 export default Vue.extend({
   name: 'BlogMain',
+
+  components: {
+    NewsArticle,
+  },
+
+  data() {
+    return {
+      listArticles,
+    };
+  },
 })
 </script>
 
 <style scoped>
 .mainWrapper {
+  max-width: 500px;
   margin: 0 auto;
   display: flex;
   flex-direction: column;

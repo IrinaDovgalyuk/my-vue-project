@@ -33,6 +33,28 @@ export default Vue.extend({
 }
 
 .links {
+  width: 300px;
   padding-top: 15px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  text-align: center;
 }
+@media only screen and (min-width: 960px) {
+  .header {
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    text-align: center;
+  }
+
+  .links {
+    width: 400px;
+    padding-top: 15px;
+    justify-content: space-between;
+    align-items: center;
+  }
+  }
 </style>

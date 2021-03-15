@@ -1,10 +1,6 @@
 <template>
   <div class="container">
-    <div>
-      <h1 class="title">
-        Портфолио
-      </h1>
-    </div>
+    <Portfolio />
   </div>
 </template>
 
@@ -36,10 +32,16 @@ export default Vue.extend({})
     Arial,
     sans-serif;
   display: block;
-  font-weight: 300;
-  font-size: 48px;
+  font-weight: 700;
+  font-size: 28px;
   color: #35495e;
   letter-spacing: 1px;
-  margin-top: 20px;
+  margin: 30px 0 0;
+}
+@media only screen and (min-width: 960px) {
+  .title {
+     font-size: 48px;
+     margin: 50px 0 0;
+  }
 }
 </style>

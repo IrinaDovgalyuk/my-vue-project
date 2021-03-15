@@ -42,6 +42,11 @@ html {
   padding: 10px 30px;
 }
 
+.button--green:first-child {
+  margin-bottom: 15px;
+  margin-right: 15px;
+}
+
 .button--green:hover {
   color: #fff;
   background-color: #3b8070;
@@ -54,11 +59,22 @@ html {
   color: #35495e;
   text-decoration: none;
   padding: 10px 30px;
-  margin-left: 15px;
+  margin-bottom: 15px;
+  /*margin-left: 15px;*/
 }
 
 .button--grey:hover {
   color: #fff;
   background-color: #35495e;
+}
+
+@media only screen and (min-width: 960px) {
+  .button--grey {
+    margin-bottom: 0px;
+  }
+  .button--green:first-child {
+    margin-bottom: 0px;
+    margin-right: 0px;
+  }
 }
 </style>
